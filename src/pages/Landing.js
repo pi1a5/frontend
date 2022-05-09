@@ -25,15 +25,14 @@ export function Landing() {
 
   async function onSuccess2(data) {
     try {
-      const response = await fetch("https://pi1a5back.herokuapp.com/api/auth", {
-        method: "POST",
-        body: JSON.stringify({
-          token: data.tokenId,
-        }),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const response = await axios
+        .post("https://pi1a5back.herokuapp.com/api/newUser", {
+          body: JSON.stringify({
+            name: data.profileObj.name,
+            email: data.profileObj.email,
+            picture: data.profileObj.imageUrl,
+          })
+        });
 
       console.log(response);
     } catch (error) {
