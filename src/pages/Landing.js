@@ -24,6 +24,7 @@ export function Landing() {
   });
 
   async function onSuccess2(data) {
+    console.log(data)
     try {
       const response = await axios
         .post("https://pi1a5back.herokuapp.com/api/newUser", {
