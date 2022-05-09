@@ -24,11 +24,6 @@ export function Landing() {
   });
 
   async function onSuccess2(data) {
-    console.log(data);
-    console.log(data.profileObj.name);
-    console.log(data.profileObj.email);
-    console.log(data.profileObj.imageUrl);
-
     try {
       const response = await fetch("https://pi1a5back.herokuapp.com/api/auth", {
         method: "POST",
@@ -76,7 +71,7 @@ export function Landing() {
         </main>
 
         <div className="button-wrapper">
-          <Loggin successFunction={onSuccess} failureFunction={onFailure} />
+          <Loggin successFunction={onSuccess2} failureFunction={onFailure} />
         </div>
       </div>
     </div>
