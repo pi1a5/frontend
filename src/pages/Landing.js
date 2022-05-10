@@ -23,7 +23,7 @@ export function Landing() {
     gapi.load("client:auth2", start);
   });
 
-  async function onSuccess2(data) {
+  async function onSuccess(data) {
     try {
       const response = await axios
         .post("https://pi1a5back.herokuapp.com/api/newUser", {
@@ -32,31 +32,15 @@ export function Landing() {
           picture: data.profileObj.imageUrl,
         });
         
-        sessionStorage.setItem('name', data.profileObj.name)
+        //sessionStorage.setItem('name', data.profileObj.name)
         sessionStorage.setItem('email', data.profileObj.email)
-        sessionStorage.setItem('photo', data.profileObj.imageUrl)
+        //sessionStorage.setItem('photo', data.profileObj.imageUrl)
         navigate('/user')
        
       // console.log(response);
     } catch (error) {
       console.log(error);
     }
-  }
-
-  //cria um novo user
-  async function onSuccess(data) {
-    axios
-      .post("https://pi1a5back.herokuapp.com/api/newUser", {
-        name: data.profileObj.name,
-        email: data.profileObj.email,
-        picture: data.profileObj.imageUrl,
-      })
-      .then(function (response) {
-        console.log(response);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
   }
 
   const onFailure = (data) => {
@@ -73,7 +57,7 @@ export function Landing() {
         </main>
 
         <div className="button-wrapper">
-          <Loggin successFunction={onSuccess2} failureFunction={onFailure} />
+          <Loggin successFunction={onSuccess} failureFunction={onFailure} />
         </div>
       </div>
     </div>
