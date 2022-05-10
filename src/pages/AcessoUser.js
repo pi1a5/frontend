@@ -29,20 +29,25 @@ export function AcessoUser() {
     }
   }
 
-    if (!user) return (
-      <div>
-        <button style={{ alignItems: "center", justifyContent: "center", display: "flex" }} onClick={consulta}>Consultar banco de dados</button>
-      </div>
-    );
+  if (!user) return (
+    <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+      }}>
+      <button onClick={consulta}>Consultar banco de dados</button>
+    </div>
+  );
 
-    return (
-      <div className="container">
-        <h1>Dados do Usuário Cadastrado</h1>
-        <img src={user.foto} alt="img" />
-        <p>Nome: {user.nome}</p>
-        <p>E-mail: {user.email} </p>
-      </div>
-    );
+  return (
+    <div className="container">
+      <h1>Dados do Usuário Cadastrado</h1>
+      <img src={user.foto} alt="img" />
+      <p>Nome: {user.nome}</p>
+      <p>E-mail: {user.email} </p>
+    </div>
+  );
 
 
 }
