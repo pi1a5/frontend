@@ -11,7 +11,7 @@ export function AcessoUser() {
   // const photo = sessionStorage.getItem('imageUrl')
 
   state = {
-    user: {}
+    user: []
   }
 
   //const location = useLocation();
@@ -25,20 +25,22 @@ export function AcessoUser() {
         });
 
       console.log(response);
-      this.setState({ response });
+      const user = response.data;
+      this.setState({ user });
     } catch (error) {
       console.log(error);
     }
   }
 
-  consulta()
-
   return (
     <div className="container">
-      <h1>Dados do Usuário Cadastrado</h1>
+       <ul>
+        { this.state.user.map(u => <li>{u.nome}</li>)}
+      </ul>
+      {/* <h1>Dados do Usuário Cadastrado</h1>
       <img src={this.state.user.foto} alt="img" />
       <p>Nome: {this.state.user.nome}</p>
-      <p>E-mail: {this.state.user.email} </p>
+      <p>E-mail: {this.state.user.email} </p> */}
     </div>
   );
 }
