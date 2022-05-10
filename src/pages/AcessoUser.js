@@ -29,7 +29,11 @@ export function AcessoUser() {
     }
   }
 
-    if (!user) return null;
+    if (!user) return (
+      <div>
+        <button onClick={consulta}>Consultar banco de dados</button>
+      </div>
+    );
 
     return (
       <div className="container">
@@ -37,7 +41,6 @@ export function AcessoUser() {
         <img src={user.foto} alt="img" />
         <p>Nome: {user.nome}</p>
         <p>E-mail: {user.email} </p>
-        <button onClick={consulta}>Consultar banco de dados</button>
       </div>
     );
 
