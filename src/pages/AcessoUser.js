@@ -1,6 +1,6 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-
+import axios from "axios";
 
 import "../styles/pages/login.css";
 
@@ -22,7 +22,7 @@ export function AcessoUser() {
           email: sessionStorage.getItem('email')
         });
 
-      this.data = response;
+      return response;
     } catch (error) {
       console.log(error);
     }
