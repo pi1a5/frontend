@@ -31,7 +31,7 @@ export function AcessoUser() {
 
     if (!user) return (
       <div>
-        <button style={{ alignItems: "center", justifyItems: "center" }} onClick={consulta}>Consultar banco de dados</button>
+        <button style={{ alignItems: "center", justifyContent: "center" }} onClick={consulta}>Consultar banco de dados</button>
       </div>
     );
 
