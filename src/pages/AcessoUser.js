@@ -35,9 +35,9 @@ export function AcessoUser() {
   return (
     <div className="container">
       <h1>Dados do Usuário Cadastrado</h1>
-      <img src={data.foto} alt="img" />
-      <p>Nome: {data.nome}</p>
-      <p>E-mail: {data.email} </p>
+      <img src={data.foto | undefined} alt="img" />
+      <p>Nome: {data.nome | undefined}</p>
+      <p>E-mail: {data.email | undefined} </p>
     </div>
   );
 }
