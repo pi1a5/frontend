@@ -10,7 +10,9 @@ export function AcessoUser() {
   // const email = sessionStorage.getItem('email')
   // const photo = sessionStorage.getItem('imageUrl')
 
-  var user = consulta();
+  state = {
+    user: {}
+  }
 
   //const location = useLocation();
   //console.log(location);
@@ -23,18 +25,20 @@ export function AcessoUser() {
         });
 
       console.log(response);
-      return response.data;
+      this.setState({ response });
     } catch (error) {
       console.log(error);
     }
   }
 
+  consulta()
+
   return (
     <div className="container">
       <h1>Dados do Usuário Cadastrado</h1>
-      <img src={this.user.foto} alt="img" />
-      <p>Nome: {this.user.nome}</p>
-      <p>E-mail: {this.user.email} </p>
+      <img src={this.state.user.foto} alt="img" />
+      <p>Nome: {this.state.user.nome}</p>
+      <p>E-mail: {this.state.user.email} </p>
     </div>
   );
 }
