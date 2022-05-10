@@ -10,7 +10,11 @@ export function AcessoUser() {
   // const email = sessionStorage.getItem('email')
   // const photo = sessionStorage.getItem('imageUrl')
 
-  const data = undefined;
+  const data = {
+    foto: '',
+    nome: 'Err',
+    email: 'Err'
+  };
 
   //const location = useLocation();
   //console.log(location);
@@ -23,6 +27,7 @@ export function AcessoUser() {
         });
 
       console.log(response);
+      console.log(response.data);
       this.data = response.data;
       console.log(this.data);
     } catch (error) {
