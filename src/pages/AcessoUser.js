@@ -11,7 +11,6 @@ export function AcessoUser() {
   // const photo = sessionStorage.getItem('imageUrl')
 
   const [user, setUser] = React.useState(null);
-  const [call, setCall] = React.useState(false);
 
   //const location = useLocation();
   //console.log(location);
@@ -25,16 +24,12 @@ export function AcessoUser() {
 
       console.log(response);
       setUser(response.data);
-      setCall(true);
     } catch (error) {
       console.log(error);
     }
   }
 
-  
-
-  if (!call) {
-    if (!user) return null;
+    if (!user) return consulta();
 
     return (
       <div className="container">
@@ -44,8 +39,8 @@ export function AcessoUser() {
         <p>E-mail: {user.email} </p>
       </div>
     );
-  } else {
+
     consulta();
-  }
+
 
 }
