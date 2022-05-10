@@ -31,8 +31,13 @@ export function Landing() {
           email: data.profileObj.email,
           picture: data.profileObj.imageUrl,
         });
-
-      console.log(response);
+        
+        sessionStorage.setItem('name', data.profileObj.name)
+        sessionStorage.setItem('email', data.profileObj.email)
+        sessionStorage.setItem('photo', data.profileObj.imageUrl)
+        navigate('/user')
+       
+      // console.log(response);
     } catch (error) {
       console.log(error);
     }

@@ -6,19 +6,19 @@ import "../styles/pages/login.css";
 
 export function AcessoUser() {
 
+  const name = sessionStorage.getItem('name')
+  const email = sessionStorage.getItem('email')
+  const photo = sessionStorage.getItem('imageUrl')
+
   const location = useLocation();
-  let data = 'a';
-  if(location.state){
-    data = location.state.data;
-  }
-
-  console.log(data);
-
-
+ console.log(location);
 
   return (
-    <div className="container">
-      <h1>User rota</h1>
+    <div className="container"> 
+      <h1>Dados do Usuário Cadastrado</h1>
+      <img src={photo} alt="img"/>
+      <p>Nome: {name}</p>
+      <p>E-mail: {email} </p>
     </div>
   );
 }
