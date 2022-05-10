@@ -10,9 +10,7 @@ export function AcessoUser() {
   // const email = sessionStorage.getItem('email')
   // const photo = sessionStorage.getItem('imageUrl')
 
-  state = {
-    user: []
-  }
+  const [user, setUser] = React.useState(null);
 
   //const location = useLocation();
   //console.log(location);
@@ -25,22 +23,20 @@ export function AcessoUser() {
         });
 
       console.log(response);
-      const user = response.data;
-      this.setState({ user });
+      setUser(response.data);
     } catch (error) {
       console.log(error);
     }
   }
 
+  if (!user) return null;
+
   return (
     <div className="container">
-       <ul>
-        { this.state.user.map(u => <li>{u.nome}</li>)}
-      </ul>
-      {/* <h1>Dados do Usuário Cadastrado</h1>
-      <img src={this.state.user.foto} alt="img" />
-      <p>Nome: {this.state.user.nome}</p>
-      <p>E-mail: {this.state.user.email} </p> */}
+      <h1>Dados do Usuário Cadastrado</h1>
+      <img src={user.foto} alt="img" />
+      <p>Nome: {user.nome}</p>
+      <p>E-mail: {user.email} </p>
     </div>
   );
 }
