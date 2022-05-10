@@ -31,7 +31,7 @@ export function AcessoUser() {
 
     if (!user) return (
       <div>
-        <button onClick={consulta}>Consultar banco de dados</button>
+        <button style={{ alignItems: "center", justifyItems: "center" }} onClick={consulta}>Consultar banco de dados</button>
       </div>
     );
 
@@ -43,8 +43,6 @@ export function AcessoUser() {
         <p>E-mail: {user.email} </p>
       </div>
     );
-
-    consulta();
 
 
 }
