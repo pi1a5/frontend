@@ -23,7 +23,7 @@ export function AcessoUser() {
         });
       
       console.log(response)
-      return response;
+      return response.data;
     } catch (error) {
       console.log(error);
     }
