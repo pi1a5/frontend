@@ -29,7 +29,11 @@ export function AcessoUser() {
     }
   }
 
-    if (!user) return consulta();
+    if (!user) return (
+      <div>
+        {consulta}
+      </div>
+    );
 
     return (
       <div className="container">
