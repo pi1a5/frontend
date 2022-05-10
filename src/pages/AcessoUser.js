@@ -21,7 +21,8 @@ export function AcessoUser() {
         .post("https://pi1a5back.herokuapp.com/api/user", {
           email: sessionStorage.getItem('email')
         });
-
+      
+      console.log(response)
       return response;
     } catch (error) {
       console.log(error);
