@@ -10,7 +10,7 @@ export function AcessoUser() {
   // const email = sessionStorage.getItem('email')
   // const photo = sessionStorage.getItem('imageUrl')
 
-  const data = consulta();
+  var data = consulta();
 
   //const location = useLocation();
   //console.log(location);
@@ -23,7 +23,6 @@ export function AcessoUser() {
         });
 
       console.log(response);
-      console.log(response.data);
       return response.data;
     } catch (error) {
       console.log(error);
