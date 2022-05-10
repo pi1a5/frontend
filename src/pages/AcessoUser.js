@@ -29,16 +29,21 @@ export function AcessoUser() {
     }
   }
 
-  if (!user) return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center"
-      }}>
-      <button onClick={consulta}>Consultar banco de dados</button>
-    </div>
-  );
+  if (!user) {
+    consulta();
+    return null;
+  };
+
+  // if (!user) return (
+  //   <div
+  //     style={{
+  //       display: "flex",
+  //       justifyContent: "center",
+  //       alignItems: "center",
+  //     }}>
+  //     <button onClick={consulta}>Consultar banco de dados</button>
+  //   </div>
+  // );
 
   return (
     <div className="container">
