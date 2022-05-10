@@ -10,10 +10,10 @@ export function AcessoUser() {
   // const email = sessionStorage.getItem('email')
   // const photo = sessionStorage.getItem('imageUrl')
 
-  const data = consulta();
+  const data = undefined;
 
-  const location = useLocation();
-  console.log(location);
+  //const location = useLocation();
+  //console.log(location);
 
   async function consulta() {
     try {
@@ -21,13 +21,15 @@ export function AcessoUser() {
         .post("https://pi1a5back.herokuapp.com/api/user", {
           email: sessionStorage.getItem('email')
         });
-      
+
       console.log(response)
-      return response.data;
+      this.data = response.data;
     } catch (error) {
       console.log(error);
     }
   }
+
+  consulta();
 
   return (
     <div className="container">
