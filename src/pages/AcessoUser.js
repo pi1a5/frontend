@@ -29,6 +29,8 @@ export function AcessoUser() {
     }
   }
 
+  consulta();
+
   if (!user) return null;
 
   return (
