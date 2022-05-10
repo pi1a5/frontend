@@ -22,8 +22,9 @@ export function AcessoUser() {
           email: sessionStorage.getItem('email')
         });
 
-      console.log(response)
+      console.log(response);
       this.data = response.data;
+      console.log(this.data);
     } catch (error) {
       console.log(error);
     }
@@ -34,8 +35,8 @@ export function AcessoUser() {
   return (
     <div className="container">
       <h1>Dados do Usuário Cadastrado</h1>
-      <img src={data.photo} alt="img" />
-      <p>Nome: {data.name}</p>
+      <img src={data.foto} alt="img" />
+      <p>Nome: {data.nome}</p>
       <p>E-mail: {data.email} </p>
     </div>
   );
