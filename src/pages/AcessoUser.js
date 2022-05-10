@@ -10,8 +10,7 @@ export function AcessoUser() {
   // const email = sessionStorage.getItem('email')
   // const photo = sessionStorage.getItem('imageUrl')
 
-  var data = consulta();
-  console.log(data)
+  var user = consulta();
 
   //const location = useLocation();
   //console.log(location);
@@ -33,9 +32,9 @@ export function AcessoUser() {
   return (
     <div className="container">
       <h1>Dados do Usuário Cadastrado</h1>
-      <img src={data.foto} alt="img" />
-      <p>Nome: {data.nome}</p>
-      <p>E-mail: {data.email} </p>
+      <img src={this.user.foto} alt="img" />
+      <p>Nome: {this.user.nome}</p>
+      <p>E-mail: {this.user.email} </p>
     </div>
   );
 }
