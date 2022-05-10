@@ -11,6 +11,7 @@ export function AcessoUser() {
   // const photo = sessionStorage.getItem('imageUrl')
 
   var data = consulta();
+  console.log(data)
 
   //const location = useLocation();
   //console.log(location);
