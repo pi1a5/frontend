@@ -26,28 +26,28 @@ export function Landing() {
   async function onSuccess(data) {
     try {
       console.log('user: ', data);
-      // const user = await axios
-      //   .post("https://pi1a5back.herokuapp.com/api/login", {
-      //     idToken: data.profileObj.idToken,
-      //     sub: data.profileObj.sub,
-      //   });
+      const user = await axios
+        .post("https://pi1a5back.herokuapp.com/api/login", {
+          idToken: data.tokenId,
+          sub: data.googleId,
+        });
 
-      // if (user) {
-      //   sessionStorage.setItem('idToken', data.profileObj.idToken)
-      //   navigate('/user')
-      // } else {
-      //   const response = await axios
-      //     .post("https://pi1a5back.herokuapp.com/api/newUser", {
-      //       name: data.profileObj.name,
-      //       email: data.profileObj.email,
-      //       picture: data.profileObj.imageUrl,
-      //       idToken: data.profileObj.idToken,
-      //       sub: data.profileObj.sub
-      //     });
-      //   console.log(response);
-      //   sessionStorage.setItem('idToken', data.profileObj.idToken)
-      //   navigate('/user')
-      // }
+      if (user) {
+        sessionStorage.setItem('idToken', data.profileObj.idToken)
+        navigate('/user')
+      } else {
+        const response = await axios
+          .post("https://pi1a5back.herokuapp.com/api/newUser", {
+            name: data.profileObj.name,
+            email: data.profileObj.email,
+            picture: data.profileObj.imageUrl,
+            idToken: data.tokenId,
+            sub: data.googleId
+          });
+        console.log(response);
+        sessionStorage.setItem('idToken', data.googleId)
+        navigate('/user')
+      }
     } catch (error) {
       console.log(error);
     }
