@@ -2,4 +2,6 @@
 
 ## Projeto Integrado 1 - PI1A5
 
-### Aplicação frontend com Ionic-Angular: https://pi1a5frontend-angular.herokuapp.com
+### Dependências instaladas:
+- react-google-login
+- gapi-script
