@@ -1,12 +1,3 @@
-﻿# Front-end do Sistema de Gestão de Estágio 
-
-## Projeto Integrado 1 - PI1A5
-
-### Dependências instaladas:
-- react-google-login
-- gapi-script
-
-
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
