@@ -31,6 +31,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias e dependências:
 
 Front End do projeto de Gestão de Estágio.
 
+<a href="https://www.figma.com/file/cbgdHgzfycaOF4mPxZeus1/Projeto-Integrado?node-id=0%3A1">Figma do Projeto</a>
 
 
 ## 📝 Licença
