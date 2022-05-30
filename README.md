@@ -1,7 +1,7 @@
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#memo-licença">Licença</a>
+  <a href="#-Licença">Licença</a>
 </p>
 
 <p align="center">
@@ -13,12 +13,12 @@
 <br>
 
 <p align="center">
-  <img alt="" src="" width="100%">
+  <img alt="" src="https://user-images.githubusercontent.com/61792159/170903213-224dd3a9-7d0d-4fb3-ae89-a7ef7160930c.png" width="100%">
 </p>
 
-## 🚀 Tecnologias & Dependências
+## 🚀 Tecnologias
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
+Esse projeto foi desenvolvido com as seguintes tecnologias e dependências:
 
 - Angular
 - Ionic
