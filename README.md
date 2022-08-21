@@ -26,6 +26,9 @@ Esse projeto foi desenvolvido com as seguintes tecnologias e dependências:
 - react-google-login
 - gapi-script
 
+## 🚀 Objetivo
+
+O sistema de estágio do IFSP, tem como objetivo melhorar os processos atuais que é realizado para gerenciar estágio.
 
 ## 💻 Projeto
 
